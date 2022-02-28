@@ -1,0 +1,28 @@
+
+h1 {
+  background-color: rgb(123, 139, 224);
+  color : rgb(255, 255, 255);
+  margin: 20px;
+  padding-left: 25px;
+  text-align: center;
+}
+
+
+h3.first {
+  color : rgb(103, 173, 103);
+  border: 8px dotted rgb(138, 231, 135);
+  margin: 20px;
+  /* padding: 10px; */
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+h3 {
+  color :cadetblue;
+}
+
+
+#second {
+  color: violet;
+}
