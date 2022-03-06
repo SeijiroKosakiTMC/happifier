@@ -1,0 +1,16 @@
+/* Keep this rule in style.css */
+
+h1{
+  color: #f66;
+  border: dotted;
+  width: fit-content;
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.smilesEx{
+  font-size: 30px;
+}
+
+/* Add more rules here */
