@@ -1,16 +1,41 @@
 /* Keep this rule in style.css */
 
+p{
+    text-align : center;
+}
+
 h1{
-  color: #f66;
-  border: dotted;
-  width: fit-content;
-  margin-top: 30px;
-  margin-left: 30px;
-  margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #f66;
+    border: dotted;
+    width: fit-content;
+    align-items: center;
 }
 
 .smilesEx{
-  font-size: 30px;
+    font-size: 30px;  
 }
 
+.smExTxt{
+    font-size: 12px;
+}
+
+#field{
+    font-size: 10px;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#cake {
+    pointer-events: none;
+    position: fixed;
+    top: -8px;     /*座標調節（カーソル位置と円の中心を合わせる）*/
+    left: -8px;    /*座標調節（カーソル位置と円の中心を合わせる）*/
+    z-index: 999;
+}
 /* Add more rules here */

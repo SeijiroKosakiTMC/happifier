@@ -36,6 +36,18 @@ let tgtArray = [];
 // 配達段階
 let dlvTreatIndex = 0;
 
+// にこちゃん背景色
+const bgStm0 = "#aaa";
+const bgStm1 = "#ccc";
+const bgStm2 = "#fff";
+const bgStm3 = "#fdd";
+const bgStm4 = "#ee5";
+
+document.getElementById("stm0").style.backgroundColor = bgStm0;
+document.getElementById("stm1").style.backgroundColor = bgStm1;
+document.getElementById("stm2").style.backgroundColor = bgStm2;
+document.getElementById("stm3").style.backgroundColor = bgStm3;
+document.getElementById("stm4").style.backgroundColor = bgStm4;
 
 
 // にこちゃんフィールド配列とテーブルの準備
@@ -126,22 +138,22 @@ function smileFactory(posX, posY){
         },
         stmCheck : function(){
             let face = "";
-            let bColor = "#fff";
+            let bColor = "";
             if (this.stomach < 10){
                 face = "😭";
-                bColor = "#aaa";
+                bColor = bgStm0;
             }else if (this.stomach < 30){
                 face = "🤤";
-                bColor = "#ccc";
+                bColor = bgStm1;
             }else if (this.stomach < 60){
                 face = "🙂";
-                bColor = "#fff";
+                bColor = bgStm2;
             }else if (this.stomach < 90){
                 face = "😊";
-                bColor = "#fdd";
+                bColor = bgStm3;
             }else{
                 face = "🤢";
-                bColor = "#ee5";
+                bColor = bgStm4;
             }
             fieldTable.rows[posY].cells[posX].innerText = face;
             fieldTable.rows[posY].cells[posX].style.backgroundColor = bColor;
@@ -215,6 +227,9 @@ let hungerIndex = 0;
 // ランダム位置から一定回数おなかすく
 // もともとのおなかすく処理に重ねておなかすく
 const hunger = window.setInterval(function (){
+
+    devMsg("hungerIndex",hungerIndex)
+
     // 範囲でおなかすく配列が空の場合、ランダム位置から範囲でおなかすく配列作成
     if (hungerArray.length === 0){
         hungerX = Math.floor(Math.random() * fieldSize);
@@ -247,3 +262,16 @@ const hunger = window.setInterval(function (){
 }, hungerInterval);
 
 
+
+// ケーキを作ります
+
+const cake = document.createElement("div");
+cake.id = "cake";
+cake.innerText="🍰"
+document.body.appendChild(cake);
+
+
+//上記のdivタグをマウスに追従させる処理
+document.addEventListener('mousemove', function (e) {
+    cake.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+});

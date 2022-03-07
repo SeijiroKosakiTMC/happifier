@@ -1,0 +1,14 @@
+/* Keep this rule in style.css */
+
+body{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#visitorName{
+    font-size: 36px;
+}
+
+
+/* Add more rules here */
